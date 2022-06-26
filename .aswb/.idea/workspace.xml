@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BlazeImportSettings">
+    <option name="buildSystem" value="Bazel" />
+    <option name="locationHash" value="mediapipefacemeshdllexample-ec2d8bd9" />
+    <option name="projectDataDirectory" value="D:\SFLS\0Application\MUNECK\DLLplugin\mediapipe-face_mesh_dll_example\.aswb" />
+    <option name="projectName" value="mediapipe-face_mesh_dll_example" />
+    <option name="projectViewFile" value="D:\SFLS\0Application\MUNECK\DLLplugin\mediapipe-face_mesh_dll_example\.aswb\.bazelproject" />
+    <option name="workspaceRoot" value="D:\SFLS\0Application\MUNECK\DLLplugin\mediapipe-face_mesh_dll_example" />
+  </component>
+  <component name="BlazeSyncStatusState">
+    <option name="dirty" value="true" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="85c42bb4-04b2-4e03-b2c7-b9e48ae7a826" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.bazelproject" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.blaze/modules/.project-data-dir.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.blaze/modules/.workspace.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/externalDependencies.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/mediapipe-face_mesh_dll_example.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mediapipe/.idea/mediapipe.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mediapipe/java/com/google/mediapipe/components/.idea/components.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\SFLS\0Application\MUNECK\DLLplugin\mediapipe-face_mesh_dll_example\.aswb\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="2AmAd9JaTMkXlNpqviHML1kxrLk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="SDK Location" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="85c42bb4-04b2-4e03-b2c7-b9e48ae7a826" name="Default Changelist" comment="" />
+      <created>1655604471133</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655604471133</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1238" height="58" key="GridCell.Tab.0.bottom" timestamp="1656052268580">
+      <screen x="-1920" y="150" width="1280" height="680" />
+    </state>
+    <state width="1238" height="58" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.150.1280.680@-1920.150.1280.680" timestamp="1656052268580" />
+    <state width="1342" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.150.1280.680@0.0.1536.824" timestamp="1656039572255" />
+    <state width="1238" height="58" key="GridCell.Tab.0.center" timestamp="1656052268580">
+      <screen x="-1920" y="150" width="1280" height="680" />
+    </state>
+    <state width="1238" height="58" key="GridCell.Tab.0.center/0.0.1536.824/-1920.150.1280.680@-1920.150.1280.680" timestamp="1656052268580" />
+    <state width="1342" height="195" key="GridCell.Tab.0.center/0.0.1536.824/-1920.150.1280.680@0.0.1536.824" timestamp="1656039572255" />
+    <state width="1238" height="58" key="GridCell.Tab.0.left" timestamp="1656052268580">
+      <screen x="-1920" y="150" width="1280" height="680" />
+    </state>
+    <state width="1238" height="58" key="GridCell.Tab.0.left/0.0.1536.824/-1920.150.1280.680@-1920.150.1280.680" timestamp="1656052268580" />
+    <state width="1342" height="195" key="GridCell.Tab.0.left/0.0.1536.824/-1920.150.1280.680@0.0.1536.824" timestamp="1656039572254" />
+    <state width="1238" height="58" key="GridCell.Tab.0.right" timestamp="1656052268580">
+      <screen x="-1920" y="150" width="1280" height="680" />
+    </state>
+    <state width="1238" height="58" key="GridCell.Tab.0.right/0.0.1536.824/-1920.150.1280.680@-1920.150.1280.680" timestamp="1656052268580" />
+    <state width="1342" height="195" key="GridCell.Tab.0.right/0.0.1536.824/-1920.150.1280.680@0.0.1536.824" timestamp="1656039572255" />
+    <state x="381" y="277" key="com.intellij.ide.util.TipDialog" timestamp="1656039575261">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="381" y="277" key="com.intellij.ide.util.TipDialog/0.0.1536.824/-1920.150.1280.680@0.0.1536.824" timestamp="1656039575261" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1655607537178">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.150.1280.680@0.0.1536.824" timestamp="1655607537178" />
+  </component>
+</project>
