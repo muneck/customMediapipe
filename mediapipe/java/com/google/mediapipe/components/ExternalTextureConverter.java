@@ -42,7 +42,7 @@ public class ExternalTextureConverter implements TextureFrameProducer {
   private static final int DEFAULT_NUM_BUFFERS = 2; // Number of output frames allocated.
   private static final String THREAD_NAME = "ExternalTextureConverter";
 
-  private RenderThread thread;
+  public RenderThread thread;
   private Throwable startupException = null;
 
   /**
@@ -213,11 +213,11 @@ public class ExternalTextureConverter implements TextureFrameProducer {
   }
 
   /** The thread used to do rendering. This is only protected for testing purposes. */
-  protected static class RenderThread extends GlThread
+  public static class RenderThread extends GlThread
       implements SurfaceTexture.OnFrameAvailableListener {
     private static final long NANOS_PER_MICRO = 1000; // Nanoseconds in one microsecond.
     private volatile SurfaceTexture surfaceTexture = null;
-    private final List<TextureFrameConsumer> consumers;
+    public final List<TextureFrameConsumer> consumers;
 
     private final Queue<PoolTextureFrame> framesAvailable = new ArrayDeque<>();
     private int framesInUse = 0;
@@ -231,6 +231,8 @@ public class ExternalTextureConverter implements TextureFrameProducer {
 
     protected int destinationWidth = 0;
     protected int destinationHeight = 0;
+
+    public AppTextureFrame customOutputFrame = null;
 
     private class PoolTextureFrame extends AppTextureFrame {
       public PoolTextureFrame(int textureName, int width, int height) {
@@ -271,8 +273,13 @@ public class ExternalTextureConverter implements TextureFrameProducer {
       }
       surfaceTexture = texture;
       if (surfaceTexture != null) {
-        surfaceTexture.setOnFrameAvailableListener(this);
-      }
+        int[] textures = new int[1];
+        GLES20.glGenTextures(1, textures, 0);
+        texture.attachToGLContext(textures[0]);
+        customOutputFrame = new AppTextureFrame(textures[0], width, height);
+        customOutputFrame.setTimestamp(System.currentTimeMillis());
+//        surfaceTexture.setOnFrameAvailableListener(this);
+    }
       destinationWidth = width;
       destinationHeight = height;
     }
@@ -280,9 +287,9 @@ public class ExternalTextureConverter implements TextureFrameProducer {
     public void setSurfaceTextureAndAttachToGLContext(
         SurfaceTexture texture, int width, int height) {
       setSurfaceTexture(texture, width, height);
-      int[] textures = new int[1];
-      GLES20.glGenTextures(1, textures, 0);
-      surfaceTexture.attachToGLContext(textures[0]);
+//      int[] textures = new int[1];
+//      GLES20.glGenTextures(1, textures, 0);
+//      surfaceTexture.attachToGLContext(textures[0]);
     }
 
     public void setConsumer(TextureFrameConsumer consumer) {
@@ -306,7 +313,13 @@ public class ExternalTextureConverter implements TextureFrameProducer {
 
     @Override
     public void onFrameAvailable(SurfaceTexture surfaceTexture) {
-      handler.post(() -> renderNext(surfaceTexture));
+//      handler.post(() -> renderNext(surfaceTexture));
+      handler.post(() -> customrenderNext(surfaceTexture));
+    }
+
+    public void API_renderNext(SurfaceTexture surfaceTexture) {
+//      handler.post(() -> renderNext(surfaceTexture));
+      handler.post(() -> customrenderNext(surfaceTexture));
     }
 
     @Override
@@ -330,6 +343,14 @@ public class ExternalTextureConverter implements TextureFrameProducer {
 
     public void setTimestampOffsetNanos(long offsetInNanos) {
       timestampOffsetNanos = offsetInNanos;
+    }
+    protected  void customrenderNext(SurfaceTexture camOutputTexture){
+      for (TextureFrameConsumer consumer : consumers) {
+        if(customOutputFrame != null){
+          customOutputFrame.setTimestamp(System.currentTimeMillis());
+          consumer.onNewFrame(customOutputFrame);
+        }
+      }
     }
 
     protected void renderNext(SurfaceTexture fromTexture) {
